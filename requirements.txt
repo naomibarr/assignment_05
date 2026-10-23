@@ -1,15 +1,4 @@
-pytest
-pandas
-streamlit>=1.56
-# The exact ruff GraderThan grades code style with — `ruff check` here matches the grade.
-ruff==0.16.9
-
-# In the payroll pipeline, I learned to clean inconsistent dates, employee IDs, and
-# currency using vectorized .str methods and pd.to_datetime, coercing bad values to 
-# NaT or 0.0 instead of formats that would crash the program. For example, "E4" had 
-# to become "E004" before join would match it. I joined the cleaned history to the 
-# roster, grouped by employee at a new grain, and reshaped the data with pivot_table
-# and melt to find the weeks people weren't paid. Testing revealed hidden traps in 
-# the assignment, such as a missing key in groupby that dropped rows. Next time I’ll
-# run explore.py after each function instead of waiting until the whole pipeline is 
-#written.
+# In the payroll pipeline, I learned to clean inconsistent dates, employee IDs, and currency using vectorized .str methods and pd.to_datetime, coercing bad values to NaT or 0.0 instead of formats that would crash the program.
+# For example, "E4" had to become "E004" before join would match it. I joined the cleaned history to the roster, grouped by employee at a new grain, and reshaped the data with pivot_table and melt to find the weeks people weren't paid.
+# Testing revealed hidden traps in the assignment, such as a missing key in groupby that dropped rows.
+# Next time I’ll run explore.py after each function instead of waiting until the whole pipeline is written.
